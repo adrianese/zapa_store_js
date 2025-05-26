@@ -12,10 +12,6 @@ body {
     line-height: 1.8;
    /* background-color: #000;*/
 }
-p{
-    color: #000000;
-    font-size: 2rem;
-}
 .contenedor {
     width: 95%;
     max-width: 120rem;
@@ -33,7 +29,7 @@ picture {
     display: block;
     margin: auto;
 }
-
+/* FONTS */
 h1, h2, h3 {
     font-family: 'Lato', sans-serif;
     margin: 2.5rem 0;
@@ -53,7 +49,11 @@ h3 {
 h4 {
     font-size: 2.6rem;
 }
-
+p{
+    color: #000000;
+    font-size: 2rem;
+}
+ /*HEADER */
 .header {
     background-color: #333333;
    /* padding: 1rem 0 3rem 0;*/
@@ -71,7 +71,7 @@ h4 {
     color:#fff;
     font-weight:700;
     margin: 0;
-    /*line-height:2;*/
+    line-height:1.8;
     max-width:60rem;
     text-align:left
 } 
@@ -83,12 +83,10 @@ h4 {
     flex-direction: row;
     justify-content: space-between;
 }
-
 .navegacion{
     display: flex;
     align-items: center;
 }
-
 a{
     color: #FFFFFF;
     text-decoration: none;
@@ -99,7 +97,16 @@ a{
     font-size: 1.8rem;         
 }
 
-/*inicio video */
+h1{
+    font-size: 3rem;
+    font-weight: 600;
+}
+span{
+    font-weight: 200;
+    border-top: 1px solid #EEE;
+    border-bottom: 1px solid #eeeeee;
+}
+/* video inicio */
 video{
     width: 100%;
     display: block;
@@ -110,7 +117,7 @@ video{
     background-color: #333333;
 }
 .contenido-footer{
-        padding-top: calc(2.5rem);
+        padding-top: 2.5rem;
 }
 .copyright{
         color: #FFFFFF;
@@ -121,37 +128,10 @@ video{
     max-width: 800px;
 }
 
-/** Media Queries 
-
-Tamaño de Media Queries
+/* Tamaño de Media Queries
 telefono: 480px;
 tablet: 768px;
-desktop: 1024px;
-**/
-
-.navbar{   
-    background-color: #dba3da;
-}
-.navbar-collapse{
-    align-items: center;
-    justify-content: space-around;
-}
-h1{
-    font-size: 3rem;
-    font-weight: 600;
-}
-span{
-    font-weight: 200;
-}
-h2{
-    font-size: 2.8rem;
-    font-weight: 300;
-}
-
-video{
-    width: 100%;
-    display: block;
-}
+desktop: 1024px; */
 
 .productos div{
     margin-top: 2rem;
@@ -185,42 +165,13 @@ p{
     font-weight: 200;
     padding-bottom: 2rem;
 }
-
-
 .exclusivos{
     width: 80%;
     padding:3rem; 
 }
-/*
-.exclusivos .carousel{
-    max-width: 60rem;
-}
-
-.carousel-item{
-    height: 60rem;
-}
-*/
-
-/* MediaQuery */
-
-@media  screen and (max-width: 577px) {
-    .navbar-brand{
-        display: none;
-}
-
-.productos{
-    margin: 1.5rem;
-}
-/*h2{
-    font-size: 2.4rem;
-    
-}*/
-
-}
 
 
-
-/* productos*/
+/* Productos*/
 seccion{
     margin-bottom:2.5rem;
     margin-top:2.5rem;
@@ -267,8 +218,9 @@ anuncio{
     background-color:#619800;
     cursor:pointer
 }
-.contenido-anuncio{padding:2rem}
-
+.contenido-anuncio{
+    padding:2rem;
+}
 .iconos-caracteristicas{
     display:flex;
     list-style:none;
@@ -303,25 +255,26 @@ anuncio{
  }}
 
 
-/* MediaQuery */
-
-@media  screen and (max-width: 577px) {
-    .navbar-brand{
-        display: none;
+/* MediaQuery 
+max-width: Aplica estilos si el ancho de la pantalla es menor o igual al valor especificado.
+min-width: Aplica estilos si el ancho de la pantalla es mayor o igual al valor especificado.*/
+/*
+@media  screen and (min-width: 570px) {
+    .contenedor-anuncios{
+    display:grid;
+    gap:2rem;
+    grid-template-columns:repeat(2,1fr);
 }
+
 .productos{
     margin: 1.5rem;
 }
 h2{
     font-size: 2.4rem;
 }
-}
-
-
+}*/
 
 /* formulario */
-
-
 .formulario{ 
     width: 60%;
     margin: auto;
@@ -354,7 +307,6 @@ h2{
     textarea{
         height: 20rem;
     }
-
     .forma-contacto{
         max-width: 30rem;
         display: flex;
@@ -368,8 +320,7 @@ h2{
 }
 
 
-
-/** Nosotros **/
+/* Nosotros */
 .nosotros {
     display: grid;
     grid-template-rows: repeat(2, auto);
@@ -388,7 +339,6 @@ h2{
        grid-column: 2 / 3;
     }
 }
-
 /** Bloques **/
 .bloques {
     display: grid;
@@ -400,20 +350,16 @@ h2{
         grid-template-columns: repeat(4, 1fr);
     }
 }
-
 .bloque {
     text-align: center;
 }
-
 .bloque-titulo {
     margin: 0;
 }
-
 .bloque-imagen {
      filter: invert(70%);  
-    /* width: 25rem;*/
+     /*width: 20rem;*/
 }
-
 .flotante{
     width: 4.5rem;
     height: 4.5rem;
@@ -430,3 +376,4 @@ h2{
     margin: .7rem 1.1rem 0;
     filter: invert(80%);  
 }
+
