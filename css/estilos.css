@@ -137,7 +137,7 @@ desktop: 1024px; */
     margin-top: 2rem;
 }
 p{
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: #4d454d;
 }
 .columna{
@@ -185,6 +185,7 @@ anuncio{
     color:#71b100;
     font-size: 3rem;
     font-weight: 900;
+    margin: 1.5rem;
 }
 
 .boton-amarillo-block{
@@ -238,6 +239,16 @@ anuncio{
     width: 3rem;
 }
 
+.separador-anuncios{
+ max-height: 40rem;
+ padding: 1rem;
+ margin: 2rem;
+ background-color: #71b100;
+}
+
+/*             MediaQuery         */
+
+
 @media (min-width: 768px) {
   /* Estos estilos se aplicarán cuando el ancho de la pantalla sea mayor o igual a 768px */
 .contenedor-anuncios{
@@ -258,21 +269,26 @@ anuncio{
 /* MediaQuery 
 max-width: Aplica estilos si el ancho de la pantalla es menor o igual al valor especificado.
 min-width: Aplica estilos si el ancho de la pantalla es mayor o igual al valor especificado.*/
-/*
-@media  screen and (min-width: 570px) {
+
+@media  (max-width: 570px) {
+
+    .barra{
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between
+    }
+     body{
+        background-color: #000;
+    }
+
     .contenedor-anuncios{
+    background-color: #a4a4a4;
     display:grid;
     gap:2rem;
-    grid-template-columns:repeat(2,1fr);
+    
 }
 
-.productos{
-    margin: 1.5rem;
 }
-h2{
-    font-size: 2.4rem;
-}
-}*/
 
 /* formulario */
 .formulario{ 
