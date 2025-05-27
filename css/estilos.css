@@ -210,7 +210,7 @@ anuncio{
     color:#fff;
     display:inline-block;
     font-weight:700;
-    margin-top:2.5rem;
+    margin:2.5rem 0rem;
     padding:1rem 3rem;
     text-align:center;
     text-decoration:none
@@ -277,9 +277,9 @@ min-width: Aplica estilos si el ancho de la pantalla es mayor o igual al valor e
         flex-direction:column;
         justify-content:space-between
     }
-     body{
+    /* body{
         background-color: #000;
-    }
+    }*/
 
     .contenedor-anuncios{
     background-color: #a4a4a4;
