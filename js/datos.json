@@ -1,0 +1,28 @@
+{
+  "datos": [
+    { "id": 1, "nombre": "Niko", "imagen": "NI-2094.jpg", "actividad": "trekking", "disponible": true, "precio": 86500 },
+    { "id": 2, "nombre": "Niko", "imagen": "NI-5682.jpg", "actividad": "running", "disponible": false, "precio": 59500 },
+    { "id": 3, "nombre": "Adeedas", "imagen": "AD-3140.jpg", "actividad": "walking", "disponible": true, "precio": 110500 },
+    { "id": 4, "nombre": "UnderA", "imagen": "UN-1903.jpg", "actividad": "running", "disponible": true, "precio": 98000 },
+    { "id": 5, "nombre": "Niko", "imagen": "NI-0983.jpg", "actividad": "running", "disponible": true, "precio": 85500 },
+    { "id": 6, "nombre": "Adeedas", "imagen": "AD-6254.jpg", "actividad": "walking", "disponible": true, "precio": 58000 },
+    { "id": 7, "nombre": "UnderA", "imagen": "UN-1840.jpg", "actividad": "trekking", "disponible": true, "precio": 105000 },
+    { "id": 8, "nombre": "Niko", "imagen": "NI-6020.jpg", "actividad": "walking", "disponible": true, "precio": 99500 },
+    { "id": 9, "nombre": "Niko", "imagen": "NI-3121.jpg", "actividad": "running", "disponible": true, "precio": 63500 },
+    { "id": 10, "nombre": "Adeedas", "imagen": "AD-4577.jpg", "actividad": "walking", "disponible": true, "precio": 109000 },
+    { "id": 11, "nombre": "UnderA", "imagen": "UN-0512.jpg", "actividad": "trekking", "disponible": true, "precio": 56000 },
+    { "id": 12, "nombre": "UnderA", "imagen": "UN-3105.jpg", "actividad": "walking", "disponible": true, "precio": 111000 },
+    { "id": 13, "nombre": "Niko", "imagen": "NI-4206.jpg", "actividad": "running", "disponible": true, "precio": 80500 },
+    { "id": 14, "nombre": "Adeedas", "imagen": "AD-1689.jpg", "actividad": "walking", "disponible": true, "precio": 69000 },
+    { "id": 15, "nombre": "UnderA", "imagen": "UN-2671.jpg", "actividad": "walking", "disponible": true, "precio": 111500 },
+    { "id": 16, "nombre": "Niko", "imagen": "NI-9812.jpg", "actividad": "running", "disponible": true, "precio": 87000 },
+    { "id": 17, "nombre": "Niko", "imagen": "NI-0058.jpg", "actividad": "walking", "disponible": true, "precio": 92500 },
+    { "id": 18, "nombre": "Adeedas", "imagen": "AD-6013.jpg", "actividad": "walking", "disponible": true, "precio": 102000 },
+    { "id": 19, "nombre": "UnderA", "imagen": "UN-7594.jpg", "actividad": "trekking", "disponible": true, "precio": 73500 },
+    { "id": 20, "nombre": "Adeedas", "imagen": "AD-6720.jpg", "actividad": "running", "disponible": true, "precio": 99500 },
+    { "id": 21, "nombre": "Niko", "imagen": "NI-3469.jpg", "actividad": "walking", "disponible": true, "precio": 70500 },
+    { "id": 22, "nombre": "Adeedas", "imagen": "AD-2241.jpg", "actividad": "trekking", "disponible": true, "precio": 66000 },
+    { "id": 24, "nombre": "Niko", "imagen": "NI-6228.jpg", "actividad": "running", "disponible": true, "precio": 99500 },
+    { "id": 23, "nombre": "Adeedas", "imagen": "AD-7890.jpg", "actividad": "running", "disponible": true, "precio": 97500 }
+  ]
+}
