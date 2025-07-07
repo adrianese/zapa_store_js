@@ -1,6 +1,6 @@
  function traer_dos(){
     const contenido = document.getElementById("contenido");
-    fetch('https://randomuser.me.api/?nat=mx&results=20')
+    fetch('https://randomuser.me.api/1.4/?nat=br,mx?page=1&results=4')
         .then(res => res.json())
             
         .then(res=> {
@@ -29,7 +29,7 @@
 function traer() {
   const contenido = document.getElementById("contenido");
 
-  // 🚀 Llamada a la API para obtener un usuario aleatorio
+  //  Llamada a la API para obtener un usuario aleatorio
   fetch("https://randomuser.me/api/")
     .then((response) => {
       if (!response.ok) {
@@ -45,7 +45,7 @@ function traer() {
       const email = usuario.email;
       const pais = usuario.location.country;
 
-      // 🧱 Insertamos datos al div
+      //  Insertamos datos al div
       contenido.innerHTML = `
         <div class="usuario-card">
           <img src="${imagen}" alt="Foto de ${nombre}">
@@ -56,6 +56,6 @@ function traer() {
       `;
     })
     .catch((error) => {
-      contenido.innerHTML = `<p style="color:red;">❌ Error: ${error.message}</p>`;
+      contenido.innerHTML = `<p style="color:red;"> Error: ${error.message}</p>`;
     });
 }

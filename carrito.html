@@ -12,68 +12,82 @@
     <link rel="shortcut icon" href="img/person-running-solid.svg" type="image/x-icon">
 </head>
 
-
 <body>
-    <header class= "header">
+    <header class="header">
         <div class="contenedor contenido-header">
-                <div class="barra">
-                     <a href="index.html">
-                     <h1 class="titulo-header">ZAPA <span>Store</span></h1>   
-                    </a>
-    <nav class="navegacion">
-         <a href="index.html">Inicio</a>
-            <a href="productos.html">Productos</a>
-            <a href="nosotros.html">Nosotros</a> 
-            <a href="contacto.html">Contacto</a>
-
-
-    </nav>
-
-                </div><!-- cierre de la barra-->
-                
+            <div class="barra">
+                <a href="index.html">
+                    <h1 class="titulo-header">ZAPA <span>Store</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="index.html">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div><!-- cierre de la barra-->
         </div>
 
 
 
     </header>
-<main class="contenedor seccion">
-<h1>Tu producto se agregó al Carrito.</h1>
-<style>
-    .usuario-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  max-width: 300px;
-  font-family: sans-serif;
-}
-.usuario-card img {
-  width: 50%;
-  border-radius: 50%;
-}
-</style>
+    <main class="contenedor seccion nosotros">
+        <section>
+<h3>Confirma tu Compra:</h3>
 
-<button onclick="traer()">Obtener usuario</button>
-<div id="contenido"></div>
+   <form action="https://formspree.io/f/xgvybglw" method="POST" class="formulario">
+          <fieldset>
+            <legend>Información Personal</legend>
+            <label for="nombre">Nombre Completo</label>  
+            <input type="text" name="nombre" value="" placeholder="Tu Nombre" required id="nombre">
+            <label for="email">E-mail</label>     
+            <input type="email" placeholder="Tu Email" value="" name="email" required id="email">  
+            <label for="mensaje">Tu Pedido:</label>
+            <textarea name="mensaje" id="mensaje" rows="" readonly>Tu Pedido:</textarea>
+            
+          </fieldset>
+          <input type="submit" value="Confirmar" class="boton-verde">
+      </form>
+      </section>
+<section>
+    <h3>Nuestros Clientes Satisfechos:</h3>
 
-    
-</main>
+    <style>
+        
+        
+        .usuario-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            max-width: 300px;
+            font-family: sans-serif;
+        }
+
+        .usuario-card img {
+            width: 60%;
+            border-radius: 50%;
+        }
+    </style>
+
+    <button onclick="traer()">Ver Clientes Satisfechos</button>
+    <div id="contenido"></div>
 
 
-<footer class="footer seccion">
-    <div class="contenedor contenedor-footer">
-        <nav class="navegacion">
-               <a href="index.html">Inicio</a>
-            <a href="productos.html">Productos</a>
-            <a href="nosotros.html">Nosotros</a> 
-            <a href="contacto.html">Contacto</a>
-    
-    
-        </nav>
-
-
-    </div>
-<p class="copyright">Adrianese - Todos los derechos Reservados 2025 &copy </p>
-</footer>
-   <script src="./js/app_api.js"></script>
+</section>
+    </main>
+    <footer class="footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+        <p class="copyright">Adrianese - Todos los derechos Reservados 2025 &copy </p>
+    </footer>
+    <script src="./js/app_carrito.js"></script>
+    <script src="./js/app_api.js"></script>
+    <script src="./js/appform.js"></script>
 </body>
 </html>

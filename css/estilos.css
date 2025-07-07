@@ -9,8 +9,7 @@ html {
 body {
     font-family: 'Lato', sans-serif;  
     font-size: 1.6rem;
-    line-height: 1.8;
-   
+    line-height: 1.8; 
 }
 /*contenedor basico */
 .contenedor {
@@ -18,13 +17,11 @@ body {
     max-width: 120rem;
     margin: 0 auto;
 }
-
 img,
 picture {
     width: 100%;
     display: block;
 }
-
 .contacto-img {
     width: 60%;
     display: block;
@@ -37,7 +34,6 @@ h1, h2, h3 {
     font-weight: 300;
     text-align: center;
 }
-
 h1 {
     font-size: 3.8rem;
 }
@@ -54,7 +50,6 @@ p{
     color: #000000;
     font-size: 2rem;
 }
-
  /*HEADER */
 .header {
     background-color: #333333;
@@ -66,7 +61,6 @@ p{
     flex-direction: column;
     justify-content: space-between;
 }
-
 .titulo-header {
     font-size: 5.8rem;
     color:#fff;
@@ -101,8 +95,6 @@ a{
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-
 span{
     font-weight: 200;
     border-top: 1px solid #EEE;
@@ -113,22 +105,18 @@ video{
     width: 100%;
     display: block;
 }
-
 .footer{
     padding: 2.5rem;
     background-color: #333333;
     color: #FFFFFF;
 }
-
 .contenido-centrado {
     max-width: 800px;
 }
-
 /* Tamaño de Media Queries
 telefono: 480px;
 tablet: 768px;
 desktop: 1024px; */
-
 p{
     font-size: 1.5rem;
     color: #4d454d;
@@ -137,12 +125,10 @@ p{
     border: 1px solid rgb(102, 101, 101);
     transition: all .2s ease; 
 }
-
 .columna:hover i {
     background-color: #de87dc;
     color: #000;
 }
-
 .columna i{
     background-color: #FFF;
     font-size: 2.5rem;  
@@ -162,15 +148,11 @@ p{
     width: 80%;
     padding:3rem; 
 }
-
-
 /* Productos*/
 .seccion{
     margin-bottom:2.5rem;
     margin-top:2.5rem;
 }
-
-
 .precio{
     color:#71b100;
     font-size: 3rem;
@@ -186,7 +168,6 @@ font-size: 2rem;
     margin: 0 auto;
     text-align: center;
 }
-
 .boton-amarillo-block{
     background-color:#e08709;
     border:none;
@@ -202,7 +183,6 @@ font-size: 2rem;
     background-color:#c77808;
     cursor:pointer;
 }
-
 .boton-verde{
     background-color:#71b100;
     border:none;
@@ -214,13 +194,11 @@ font-size: 2rem;
     text-align:center;
     text-decoration:none
 }
-
 .boton-redondeado{
     border-radius: 1rem;
     padding: 1.5rem 3rem;
     margin:2.5rem 0rem;
     align-self: center;
-    
 }
 .boton-verde:hover{
     background-color:#619800;
@@ -246,14 +224,12 @@ font-size: 2rem;
 .icono{
     width: 3rem;
 }
-
 .separador-anuncios{
  max-height: 40rem;
  padding: 1rem;
  margin: 2rem;
  background-color: #71b100;
 }
-
 /* formulario */
 .formulario{ 
     width: 60%;
@@ -282,7 +258,6 @@ font-size: 2rem;
         border: 1px solid #4d454d;
         border-radius: 1rem;
         margin-bottom: 2rem;
-
     }
     textarea{
         height: 20rem;
@@ -299,7 +274,6 @@ font-size: 2rem;
     }
 }
 
-
 /* Nosotros */
 .nosotros {
     display: grid;
@@ -308,15 +282,12 @@ font-size: 2rem;
 .nosotros-imagen {
     grid-row: 1 / 2;
 }
-
-
 /** Bloques **/
 .bloques {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
-
 @media (min-width: 768px) {
     .nosotros {
         grid-template-columns: repeat(2, 1fr);
@@ -326,7 +297,6 @@ font-size: 2rem;
        grid-column: 2 / 3;
     }
 }
-
 @media (min-width: 768px) {
     .bloques {
         grid-template-columns: repeat(4, 1fr);
@@ -358,7 +328,6 @@ font-size: 2rem;
     margin: .7rem 1.1rem 0;
     filter: invert(20%);  
 }
-
 .flotante {
   opacity: 0;
   visibility: hidden;
@@ -366,18 +335,12 @@ font-size: 2rem;
   transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
   transform: translateY(20px); /* parte de abajo */
 }
-
-
-
 .flotante.visible {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   transform: translateY(0);
 }
-
-
-
 /*modificacion footer*/
 .navegacion a {
   color: #ffffff;
@@ -385,11 +348,9 @@ font-size: 2rem;
   
   transition: color 0.2s ease-in-out;
 }
-
 .navegacion a:hover {
   color : #eba543;
 }
-
 /* copy naranja */
 .contenedor-copy {
   display: flex;
@@ -400,7 +361,6 @@ font-size: 2rem;
   padding: 1.2rem 10rem; /* Espaciado interno */
   flex-wrap: wrap;
 }
-
 /* texto centrado en 480px */
 .copyright {
   color: #ffffff;
@@ -409,39 +369,28 @@ font-size: 2rem;
   margin: 0;
    font-size: 1.5rem;
 }
-
-
 .icono-sobre{
     filter: invert(10%);
 }
-
-
 /* Iconos de Contacto (correo y GitHub) */
 .iconos-contacto {
     display: flex;
     gap: 1.5rem;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
-
 .iconos-contacto a img,
 .iconos-contacto a svg {
     width: 2.5rem; /* Tamaño de los iconos de contacto */
     height: 2.5rem;
     transform: scale(1.2);
     transition: transform 0.3s ease;
-      
 }
-
 .iconos-contacto a:hover img,
 .iconos-contacto a:hover svg {
     transform: translateY(-3px);
      filter: invert(70%);
-    
     transform: scale(1.2);
-   
 }
-
-
 /*  RESPONSIVE */
 @media (max-width: 768px) {
   .contenedor-copy {
@@ -466,23 +415,17 @@ font-size: 2rem;
         font-size: 1.2rem;
         text-align: center;
     }
-
-
 }
-
 /* productos con js*/
-
 #filtros {
   margin-bottom: 15px;
 }
-
 button {
   padding: 8px 12px;
   margin: 10px 0;
   font-size: 14px;
   cursor: pointer;
 }
-
 /* Media query para cambiar fondo por rangos de ancho */
 @media (max-width: 480px) {
     body {
@@ -491,7 +434,6 @@ button {
     font-size: 1.4rem;
     line-height: 1.4;
 }
-
   .producto{
     border-radius: 3px;
   }
@@ -557,6 +499,25 @@ p{
   margin-top: 5px;
 }
 
+/*////////////////////*/
+/*SECCION COMPARAR */
+
+.comparativa-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+.comparativa-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+.producto.comparado {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  width: 250px;
+  min-width: 200px;
+  flex-shrink: 0;
+  background: #fafafa;
+  border-radius: 8px;
+}
 .volver-catalogo,
 #compararBtn {
   padding: 8px 12px;
@@ -571,7 +532,7 @@ p{
   font-weight: bold;
   text-align: center;
 }
-
+/*seccion banner no usada*/
 .banner {
   grid-column: 1 / -1;
   /* ocupa todas las columnas del grid */
@@ -617,8 +578,6 @@ p{
 .exclusivos-imagen {
   transition: transform 1.5s ease;
 }
-   /* MediaQuery  */
-
    /* Media query para cambiar fondo por rangos de ancho hasta 480px  */
 @media (max-width: 480px) {
     body {
@@ -644,7 +603,6 @@ p{
         display:grid;
         gap:1rem;
         grid-template-columns:repeat(2,1fr);
-       
         }
     .anuncio{
         background-color:#eee;
@@ -655,7 +613,6 @@ p{
         padding:2rem;
     } 
 }
-
  /*Estos estilos se aplicarán cuando el ancho de la pantalla sea mayor o igual a 768px */
 @media (min-width: 769px) {
     a{
@@ -681,8 +638,6 @@ p{
     align-items: baseline;
     max-block-size: max-content;
     gap: 2rem;
-       
-
 }
 }
 /* Extra desktop: desde 951px, 4 columnas */
@@ -690,13 +645,10 @@ p{
     body {
       background-color: #fce8ca;
     }
-
     .contenedor-anuncios {
     grid-template-columns: repeat(4, 1fr);
     }
 }
-
-
 
 #carrito-contador {
   color: #f53636;
@@ -711,9 +663,7 @@ p{
   position: relative;
   display: inline-block;
 }
-
 .carrito-desplegable {
-
   color: #a4a4a4;
   position: fixed;
   top: 134px;
@@ -730,10 +680,8 @@ p{
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
   transition: transform 0.3s ease-in, opacity 0.3s ease-out, visibility 0s 0.5s;
 }
-
 .carrito-desplegable.visible {
   transform: translateY(0%);
   opacity: 1;
@@ -741,9 +689,6 @@ p{
   pointer-events: auto;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
-
-
-
 /*titulo spotlight*/
 .titulo-header {
   color: white;
@@ -756,10 +701,6 @@ p{
     0 0 30px rgba(255, 215, 0, 0.4);
   cursor: pointer;
 }
-
-
-
-
 /* Contenedor principal del footer (sección oscura) */
 .footer-principal {
     display: flex;
@@ -770,14 +711,12 @@ p{
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador sutil */
     gap: 2rem; /* Espacio entre los elementos en móviles */
 }
-
 @media (min-width: 768px) {
     .footer-principal {
         flex-direction: row; /* En fila para pantallas más grandes */
         align-items: flex-start; /* Alinear arriba para el diseño */
     }
 }
-
 /* Navegación del Footer */
 .navegacion-footer {
     display: flex;
@@ -785,25 +724,21 @@ p{
     text-align: center;
     gap: 1.5rem; /* Espacio entre enlaces */
 }
-
 .navegacion-footer a {
     color: var(--color-blanco);
     text-decoration: none;
     font-size: 1.8rem; /* Tamaño de fuente para enlaces */
     transition: color 0.3s ease;
 }
-
 .navegacion-footer a:hover {
     color: var(--color-naranja);
 }
-
 @media (min-width: 768px) {
     .navegacion-footer {
         flex-direction: row;
         gap: 2.5rem;
     }
 }
-
 /* Información del Footer (Título y Redes Sociales) */
 .footer-info {
     display: flex;
@@ -812,14 +747,12 @@ p{
     text-align: center;
     gap: 1.5rem;
 }
-
 @media (min-width: 768px) {
     .footer-info {
         align-items: flex-end; /* Alinear a la derecha en pantallas grandes */
         text-align: right;
     }
 }
-
 .titulo-pagina {
     font-size: 3rem; /* Tamaño del título */
     margin: 0;
@@ -831,14 +764,11 @@ p{
     margin: 0;
     color: var(--color-blanco);
     font-weight: 300;
-    
 }
-
 .redes-sociales {
     display: flex;
     gap: 1.5rem;
 }
-
 .redes-sociales a img,
 .redes-sociales a svg {
     width: 2.8rem; /* Tamaño de los iconos de redes sociales */
@@ -846,15 +776,11 @@ p{
     /*fill: var(--color-blanco); */
     transition: transform 0.3s ease;
 }
-
 .redes-sociales a:hover img,
 .redes-sociales a:hover svg {
     transform: translateY(-3px); /* Pequeño efecto al pasar el mouse */
 }
-
-
 /* Contenedor de Copyright (sección naranja) */
-
 @media (min-width: 768px) {
     .contenedor-copy {
         flex-direction: row;
@@ -862,10 +788,6 @@ p{
         padding: 1.2rem 10rem;
     }
 }
-
-
-
-
 /*estilos carrito*/
 .panel-carrito {
   position: fixed;
@@ -894,23 +816,40 @@ p{
   margin-top: 1rem;
 }
 
-/*////////////////////*/
+/*Modal comparaciones*/
 
-
-.comparativa-wrapper::-webkit-scrollbar {
-  height: 8px;
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.92); /* blanco apagado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
-.comparativa-wrapper::-webkit-scrollbar-thumb {
-  background-color: #ccc;
-  border-radius: 4px;
+
+.modal-contenido {
+  background-color: #fff;
+  padding: 32px;
+  max-width: 900px;
+  max-height: 90%;
+  overflow-y: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  position: relative;
 }
 
-.producto.comparado {
-  border: 1px solid #ddd;
-  padding: 1rem;
-  width: 250px;
-  min-width: 200px;
-  flex-shrink: 0;
-  background: #fafafa;
-  border-radius: 8px;
+.cerrar-modal {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.oculto {
+  display: none;
 }

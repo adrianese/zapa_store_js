@@ -19,19 +19,14 @@ window.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("contenedor").innerHTML = "Error al cargar productos.";
     console.error(err);
   }
-
     document.getElementById("compararBtn").addEventListener("click", compararSeleccionados);
     document.getElementById('icono-carrito').addEventListener('click', mostrarPanelCarrito);
-    
-
     document.getElementById("cargar").addEventListener("click", () => {
     document.getElementById("filtroMarca").value = '';
     document.getElementById("filtroActividad").value = '';
     mostrarTodosLosProductos();
     });
-  
   });
-
 
 // ==========================
 // CARGA DE FILTROS DE INICIO
@@ -57,7 +52,6 @@ function cargarFiltros() {
     op.textContent = act;
     selectActividad.appendChild(op);
   });
-
   selectMarca.addEventListener("change", aplicarFiltros);
   selectActividad.addEventListener("change", aplicarFiltros);
 }
@@ -66,14 +60,12 @@ function cargarFiltros() {
 function aplicarFiltros() {
   const marca = document.getElementById("filtroMarca").value;
   const actividad = document.getElementById("filtroActividad").value;
-
   const filtrados = productos.filter(
     (p) => (marca === "" || p.nombre === marca) && (actividad === "" || p.actividad === actividad)
   );
   renderizarProductos(filtrados);
   sincronizarBotonesCarrito();
 }
-
 
 // ==========================
 // MUESTRA TODOS LOS PRODUCTOS
@@ -86,8 +78,6 @@ function mostrarTodosLosProductos() {
 // ==========================
 // MUESTRA PRODUCTOS FILTRADOS
 // ==========================
-
-
 function renderizarProductos(lista) {
   const contenedor = document.getElementById("contenedor");
   contenedor.innerHTML = '';
@@ -107,7 +97,7 @@ function renderizarProductos(lista) {
     div.innerHTML = `
       <div class="encabezado-card">
         <label class="comparar-check">
-          <input type="checkbox" onchange="toggleSeleccion(${producto.id})">
+        <input type="checkbox" onchange="toggleSeleccion(${producto.id})">
         comparar</label>
       </div>
       <div class="anuncio">
@@ -143,10 +133,87 @@ function renderizarProductos(lista) {
     div.appendChild(botonCarrito);
     contenedor.appendChild(div);
   });
-
   actualizarBotonComparar();
 }
 
+// ============================
+// MUESTRA PRODUCTOS COMPARADOS 
+// ============================
+function mostrarComparativa(lista) {
+  const modal = document.getElementById("modalComparativa");
+  const contenido = document.getElementById("contenidoComparativa");
+  contenido.innerHTML = '';
+
+  lista.forEach((p) => {
+    const card = document.createElement("div");
+    card.className = "producto-comparado";
+    card.style.cssText = `
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 12px;
+      align-items: center;
+    `;
+
+    const imagen = document.createElement("img");
+    imagen.src = `img/${p.imagen}`;
+    imagen.alt = p.nombre;
+    imagen.style.cssText = `
+      width: 30%;
+      object-fit: cover;
+      border-radius: 8px;
+    `;
+
+    const info = document.createElement("div");
+    info.style.width = "70%";
+    info.innerHTML = `
+      <h3>${p.nombre}</h3>
+      <p><strong>Actividad:</strong> ${p.actividad}</p>
+      <p><strong>Precio:</strong> $${p.precio.toLocaleString("es-AR")}</p>
+      <p><strong>Diseño:</strong> Zapatillas modernas, confortables y resistentes para múltiples disciplinas.</p>
+      <p><strong>Descripción:</strong> Capellada respirable, refuerzos técnicos y estilo versátil para un desempeño impecable.</p>
+    `;
+
+    card.append(imagen, info);
+    contenido.appendChild(card);
+  });
+
+  // Botón "Volver al catálogo"
+  const contenedorBoton = document.createElement("div");
+  contenedorBoton.style.cssText = 'text-align: center; margin-top: 24px;';
+
+  const volver = document.createElement("button");
+  volver.innerHTML = "🔙 Volver al catálogo";
+  volver.className = "volver-catalogo";
+  volver.style.cssText = `
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #e08709;
+    color: #fff;
+    cursor: pointer;
+  `;
+
+  volver.onclick = cerrarModalComparativa;
+
+  contenedorBoton.appendChild(volver);
+  contenido.appendChild(contenedorBoton);
+
+  modal.classList.remove("oculto");
+}
+ document.getElementById("cerrarComparativa").onclick = cerrarModalComparativa;
+
+function cerrarModalComparativa() {
+  const modal = document.getElementById("modalComparativa");
+  modal.classList.add("oculto");
+
+  seleccionados = [];
+  document.getElementById("compararArea").style.display = "none";
+  renderizarProductos(productos);
+  sincronizarBotonesCarrito();
+}
 
 // ===================
 // FUNCIONES CARRITO
@@ -253,7 +320,6 @@ function compararSeleccionados() {
   mostrarComparativa(comparados);
 }
 
-
 function sincronizarBotonesCarrito() {
   carrito.forEach(item => {
     const boton = document.querySelector(`button[data-id='${item.id}']`);
@@ -263,50 +329,6 @@ function sincronizarBotonesCarrito() {
     }
   });
 }
-
-
-// ========================================
-// MUESTRA PRODUCTOS COMPARADOS no funciona
-// =======================================
-function mostrarComparativa(lista) {
-  const contenedor = document.getElementById("contenedor");
-  contenedor.innerHTML = '';
-
-  const wrapper = document.createElement("div");
-  wrapper.className = "comparativa-wrapper";
-  wrapper.style.display = "flex";
-  wrapper.style.gap = "16px";
-  wrapper.style.overflowX = "auto";
-
-  lista.forEach((p) => {
-    const div = document.createElement("div");
-    div.className = "producto comparado";
-    div.innerHTML = `
-      <img src="img/${p.imagen}" alt="${p.nombre}">
-      <h3>${p.nombre}</h3>
-      <p><strong>ID:</strong> ${p.id}</p>
-      <p><strong>Actividad:</strong> ${p.actividad}</p>
-      <p><strong>Disponible:</strong> ${p.disponible ? 'Sí' : 'No'}</p>
-      <p><strong>Precio:</strong> $${p.precio.toLocaleString("es-AR")}</p>
-      <p><strong>Talle:</strong> ${p.talle || '—'}</p>
-    `;
-    wrapper.appendChild(div);
-  });
-
-  const volver = document.createElement("button");
-  volver.textContent = "🔙 Volver al catálogo";
-  volver.className = "volver-catalogo";
-  volver.onclick = () => {
-    renderizarProductos(productos);
-    sincronizarBotonesCarrito(); // importante para mantener botón toggle al volver
-  };
-
-  contenedor.appendChild(wrapper);
-  contenedor.appendChild(volver);
-}
-
-
-
 
 // =======================
 // FLECHA DE VOLVER ARRIBA
@@ -322,3 +344,22 @@ window.addEventListener("scroll", () => {
     flecha.classList.remove("visible");
   }
 });
+
+
+//FALTA
+// =======================
+// CON CARRITO VACIO NO HABILITA COMPRAR
+// =======================
+ /* window.addEventListener('DOMContentLoaded', () => {
+    const comprarBtn = document.querySelector('.boton-comprar');
+    const carritoData = JSON.parse(sessionStorage.getItem('carrito') || '[]');
+
+    if (carritoData.length === 0) {
+      comprarBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // evita redirección
+        alert('El carrito está vacío.');
+      });
+      comprarBtn.classList.add('desactivado'); // opcional para dar estilo visual
+    }
+  });
+*/

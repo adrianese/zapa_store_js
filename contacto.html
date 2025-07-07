@@ -43,30 +43,31 @@
       </picture>
 
       <h2>Llene el Formulario de Contacto</h2>
-      <form action="" class="formulario">
+      
+      <form action= "https://formspree.io/f/xrbkooqa" method="POST" class="formulario">
           <fieldset>
             <legend>Información Personal</legend>
             <label for="nombre">Nombre</label>
             
-            <input type="text" name="nombre" placeholder="Tu Nombre" id="nombre">
+            <input type="text" name="nombre" placeholder="Tu Nombre" required id="nombre">
             <label for="email">E-mail</label>
             
-            <input type="email" placeholder="Tu Email" name="email" id="email">
+            <input type="email" placeholder="Tu Email" name="email" required id="email">
             <label for="telefono">Telefono</label>
             <input type="tel" placeholder="Tu Teléfono" name="telefono" id="telefono">
           
-            <label for="mensaje">Mensaje:</label>
-            <textarea name="" id="mensaje" cols="" rows="">Tu mensaje</textarea>
+            <label for="mensaje">Tu Mensaje:</label>
+            <textarea name="mensaje" id="mensaje" cols="" required rows=""></textarea>
           </fieldset>
           
           <fieldset>
             <legend>Desea Recibir Novedades de productos</legend>
             <p>Elija Una Opción</p>
             <div class="forma-contacto">
-              <label for="contactar-telefono">Suscribirme</label>
+              <label for="contacto-suscripcion">Suscribirme</label>
               <input type="radio" value="suscribir" name="contacto" id="">
              
-              <label for="contactar-email">Desuscribirme</label>
+              <label for="contacto-desuscripcion">Desuscribirme</label>
               <input type="radio" value="desuscribir" name="contacto" id="">
             
             </div>
@@ -95,6 +96,6 @@
     </div>
 <p class="copyright">Adrianese - Todos los derechos Reservados 2025 &copy </p>
 </footer>
-    
+    <script src="./js/appform.js"></script>
 </body>
 </html>
