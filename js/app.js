@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     cargarCarrito();                  // 1. Restaurar carrito desde sessionStorage
     actualizarCarritoUI(true);       // 2. Refrescar UI sin abrir el panel
     mostrarTodosLosProductos();
-    cargarFiltros();                 // 5. Cargar marcas y actividades en selects
+    cargarFiltros();                 // 4. Cargar marcas y actividades en selects
   } catch (err) {
     document.getElementById("contenedor").innerHTML = "Error al cargar productos.";
     console.error(err);

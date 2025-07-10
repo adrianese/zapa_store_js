@@ -61,6 +61,7 @@ p{
     flex-direction: column;
     justify-content: space-between;
 }
+/*titulo letras brillantes*/
 .titulo-header {
     font-size: 5.8rem;
     color:#fff;
@@ -68,8 +69,16 @@ p{
     margin: 0;
     line-height:1.8;
     max-width:60rem;
-    text-align:left
+    text-align:left;
+    transition: text-shadow 0.3s ease;
 } 
+.titulo-header:hover {
+  text-shadow:
+    0 0 5px rgba(255, 215, 0, 0.8),
+    0 0 15px rgba(255, 165, 0, 0.6),
+    0 0 30px rgba(255, 215, 0, 0.4);
+  cursor: pointer;
+}
 .barra{
     display: flex;
     align-items:center;
@@ -524,7 +533,7 @@ p{
   margin: 10px auto;
   display: block;
   font-size: 14px;
-  background-color: #c47eb4;
+  background-color: #71B100;
   color: white;
   border: none;
   border-radius: 5px;
@@ -689,18 +698,7 @@ p{
   pointer-events: auto;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
-/*titulo spotlight*/
-.titulo-header {
-  color: white;
-  transition: text-shadow 0.3s ease;
-}
-.titulo-header:hover {
-  text-shadow:
-    0 0 5px rgba(255, 215, 0, 0.8),
-    0 0 15px rgba(255, 165, 0, 0.6),
-    0 0 30px rgba(255, 215, 0, 0.4);
-  cursor: pointer;
-}
+
 /* Contenedor principal del footer (sección oscura) */
 .footer-principal {
     display: flex;
@@ -816,7 +814,7 @@ p{
   margin-top: 1rem;
 }
 
-/*Modal comparaciones*/
+/*Modal Productos comparaciones*/
 
 .modal {
   position: fixed;

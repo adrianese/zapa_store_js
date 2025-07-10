@@ -59,3 +59,8 @@ function traer() {
       contenido.innerHTML = `<p style="color:red;"> Error: ${error.message}</p>`;
     });
 }
+
+
+
+
+
